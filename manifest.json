@@ -1,17 +1,22 @@
 {
   "manifest_version": 2,
-  "name": "PROJECT NAME",
-  "description": "PROJECT DESCRIPTION",
-  "version": "0.1",
+  "name": "Text-based Chaos",
+  "description": "An extension that makes text completely unreadable. Because why not.",
+  "version": "1",
+  "permissions": ["storage"],
   "content_scripts": [
     {
       "matches": [
-        "*://*/*"
+        "*://*/*",
+        "file://*"
       ],
       "js": [
-        "content.js"
+        "project2.js"
       ],
       "run_at": "document_end"
     }
-  ]
+  ],
+  "icons": {
+    "128": "images/icon.png"
+  }
 }
